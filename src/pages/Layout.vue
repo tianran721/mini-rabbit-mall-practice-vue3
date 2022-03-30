@@ -8,6 +8,7 @@ export default {
 
 <script setup>
 // import AppTopnav from '@/components/app-topnav.vue'
+import AppFooter from "@/components/app-footer";
 </script>
 
 <template>
@@ -17,5 +18,5 @@ export default {
 <!--二级路由-->
     <router-view/>
   </main>
-  <footer>底部</footer>
+  <AppFooter/>
 </template>
