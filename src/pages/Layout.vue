@@ -7,12 +7,15 @@ export default {
 </script>
 
 <script setup>
-import Home from './Home.vue'
+// import AppTopnav from '@/components/app-topnav.vue'
 </script>
 
 <template>
-  <nav>通栏</nav>
-  <header>头部</header>
-  <Home></Home>
+  <AppTopnav/>
+  <AppHeader/>
+  <main>
+<!--二级路由-->
+    <router-view/>
+  </main>
   <footer>底部</footer>
 </template>
