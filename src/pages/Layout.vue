@@ -7,8 +7,13 @@ export default {
 </script>
 
 <script setup>
-// import AppTopnav from '@/components/app-topnav.vue'
-import AppFooter from "@/components/app-footer";
+import {onMounted} from "vue";
+import {useCategoryStore} from '@/store/category-store.js'
+let category = useCategoryStore()
+
+onMounted(() => {
+  category.getList()
+})
 </script>
 
 <template>

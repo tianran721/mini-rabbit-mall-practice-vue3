@@ -1,5 +1,16 @@
+<script>
+export default {
+  name: "app-header-nav",
+};
+</script>
+
+<script setup>
+import {useCategoryStore} from '@/store/category-store.js'
+let category = useCategoryStore()
+</script>
 <template>
   <ul class="app-header-nav">
+    {{category}}
     <li class="home"><RouterLink to="/">首页</RouterLink></li>
     <li><a href="#">美食</a></li>
     <li><a href="#">餐厨</a></li>
@@ -13,11 +24,7 @@
   </ul>
 </template>
 
-<script>
-export default {
-  name: "app-header-nav",
-};
-</script>
+
 
 <style scoped lang="less">
 .app-header-nav {
